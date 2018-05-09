@@ -1,0 +1,88 @@
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+aside {
+	padding: 20px;
+	background-color: #ddd;
+	border: 2px solid #000;
+  color: #000;
+}
+
+.message{
+  color: #f00;
+  font-weight: bold;
+}
+
+.list{
+  background-color: #4f5d6d;
+  border: 2px solid #fff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+textarea {
+  height: 250px !important;
+}
+
+/* styles for '...' */ 
+.block-with-text {
+  /* hide text if it more than N lines  */
+  overflow: hidden;
+  /* for set '...' in absolute position */
+  position: relative; 
+  /* use this value to count block height */
+  line-height: 1.2em;
+  /* max-height = line-height (1.2) * lines max number (3) */
+  max-height: 6em; 
+  /* fix problem when last visible word doesn't adjoin right side  */
+  text-align: justify;  
+  /* place for '...' */
+  margin-right: -1em;
+  padding-right: 1em;
+}
+/* create the ... */
+.block-with-text:before {
+  /* points in the end */
+  content: '...';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of block */
+  right: 0;
+  bottom: 0;
+}
+/* hide ... if we have text, which is less than or equal to max lines */
+.block-with-text:after {
+  /* points in the end */
+  content: '';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of text */
+  right: 0;
+  /* set width and height */
+  width: 1em;
+  height: 1em;
+  margin-top: 0.2em;
+  /* bg color = bg color under block */
+  background: white;
+}
+
+.panel-body {
+  padding: 0 !important;
+}
+.panel {
+  box-shadow: none !important;
+}
+.sidebar {
+  padding: 20px 10px 0 10px;
+  background-color: #2b3e50;
+}
+.panel-heading {
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+}
